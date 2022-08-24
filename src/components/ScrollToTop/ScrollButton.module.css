@@ -1,0 +1,41 @@
+.scrollTopButton {
+  display: inline-block;
+  background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    background-image .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.scrollTopButton::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+.scrollTopButton:hover {
+  cursor: pointer;
+  background: #333;
+}
+
+.scrollTopButton:active {
+  background: #555;
+}
+
+.scrollTopButton.show {
+  opacity: 1;
+  visibility: visible;
+}
